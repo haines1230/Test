@@ -1,10 +1,52 @@
+#list {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+}
+#list ol {
+  font-weight: bold;
+  width: 180px;
+  margin-top: 0px;
+  margin-left: 20px;
+  padding: 20px;
+  color:#666362;
+}
+#list ul {
+  padding: 0;
+  margin-left: 20px;
+}
+#list .explain {
+  padding: 20px;
+}
+#list #background {
+  background-image: url('Telecommunication.jpg');
+  background-repeat: no-repeat;
+  background-opsition: center;
+  background-size: cover;
+  border-left: 1px solid gray;
+}
 .music {
-  display: block;
+  display:block;
+  margin-top: 200px;
 }
 h1 {
   text-align: center;
   font-size: 40px;
+  border-bottom: 2px solid gray;
+  margin:0;
+  padding: 20px;
 }
-ol {
-  font-weight: bold;
+a {
+  text-decoration: none;
+}
+
+@media(max-width: 800px){
+  #list {
+    display: block;
+  }
+  #grid #background {
+    border-right: none;
+  }
+  h1 {
+    border-bottom: none;
+  }
 }
