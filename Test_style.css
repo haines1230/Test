@@ -38,6 +38,13 @@
   background-size: contain;
   border-left: 1px solid gray;
 }
+#list .main_page {
+  display: inline;
+  border: 1px solid black;
+  color:white;
+  background-color: gray;
+  margin-left: 30px;
+}
 .music {
   display:block;
   margin-top: 200px;
