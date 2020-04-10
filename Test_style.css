@@ -31,6 +31,13 @@
   background-size: 30%;
   border-left: 1px solid gray;
 }
+#list #background3 {
+  background-image: url('mobile testing.jpg');
+  background-repeat: repeat;
+  background-position: center;
+  background-size: contain;
+  border-left: 1px solid gray;
+}
 .music {
   display:block;
   margin-top: 200px;
@@ -51,6 +58,12 @@ a {
     display: block;
   }
   #grid #background1 {
+    border-right: none;
+  }
+  #grid #background2 {
+    border-right: none;
+  }
+  #grid #background3 {
     border-right: none;
   }
   h1 {
