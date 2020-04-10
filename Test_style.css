@@ -17,11 +17,18 @@
 #list .explain {
   padding: 20px;
 }
-#list #background {
+#list #background1 {
   background-image: url('Telecommunication.jpg');
   background-repeat: no-repeat;
-  background-opsition: center;
+  background-position: center;
   background-size: cover;
+  border-left: 1px solid gray;
+}
+#list #background2 {
+  background-image: url('ctfl.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 30%;
   border-left: 1px solid gray;
 }
 .music {
@@ -43,7 +50,7 @@ a {
   #list {
     display: block;
   }
-  #grid #background {
+  #grid #background1 {
     border-right: none;
   }
   h1 {
