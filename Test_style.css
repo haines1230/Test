@@ -82,7 +82,7 @@ a {
 #night_day {
   position: relative;
   text-align: center;
-  align-items: center;
+  width: 50px;
 }
 
 
