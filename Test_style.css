@@ -78,14 +78,6 @@ a {
   }
 }
 
-/* Dark Them button */
-#night_day {
-  position: relative;
-  text-align: center;
-  width: 50px;
-}
-
-
 /* Switch */
 .switch {
   position: relative;
