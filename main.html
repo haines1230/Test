@@ -26,24 +26,26 @@
        <br><br>
 
        <input style = "margin-left: 35px; width: 50px;" type = "button" value = "Night" onclick = "
+       var target = document.querySelector('body');
        if(this.value === 'Night'){
-         document.querySelector('body').style.backgroundColor = 'black';
-         document.querySelector('body').style.color = 'white';
+         target.style.backgroundColor = 'black';
+         target.style.color = 'white';
          this.value = 'Day';
        }
         else{
-          document.querySelector('body').style.backgroundColor = 'white';
-          document.querySelector('body').style.color = 'black';
+          target.style.backgroundColor = 'white';
+          target.style.color = 'black';
           this.value = 'Night';
         }
        ">
 
-       <!--
+
+<!--
        <h3 style="padding-left: 25px;">Dark Mode</h3>
        <label class="switch">
          <input type="checkbox" checked>
          <span class="slider round"></span>
-       </label>-->
+       </label> -->
 
      </ol>
 
