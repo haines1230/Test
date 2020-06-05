@@ -25,16 +25,16 @@
        <li>Linux OS System</li>
        <br><br>
 
-       <input id="night_day" style = "margin-left: 35px;" type = "button" value = "Night" onclick = "
-       if(document.querySelector('#night_day').value === 'Night'){
+       <input style = "margin-left: 35px; width: 50px;" type = "button" value = "Night" onclick = "
+       if(this.value === 'Night'){
          document.querySelector('body').style.backgroundColor = 'black';
          document.querySelector('body').style.color = 'white';
-         document.querySelector('#night_day').value = 'Day';
+         this.value = 'Day';
        }
         else{
           document.querySelector('body').style.backgroundColor = 'white';
           document.querySelector('body').style.color = 'black';
-          document.querySelector('#night_day').value = 'Night';
+          this.value = 'Night';
         }
        ">
 
