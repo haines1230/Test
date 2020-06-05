@@ -24,14 +24,20 @@
        <li>Android OS System</li>
        <li>Linux OS System</li>
        <br><br>
-       <input  style="margin-left: 20px;"type="button" value="Night" onclick="
-       document.querySelector('body').style.backgroundColor = 'black';
-       document.querySelector('body').style.color = 'white';
+
+       <input id="night_day" style = "margin-left: 35px;" type = "button" value = "Night" onclick = "
+       if(document.querySelector('#night_day').value === 'Night'){
+         document.querySelector('body').style.backgroundColor = 'black';
+         document.querySelector('body').style.color = 'white';
+         document.querySelector('#night_day').value = 'Day';
+       }
+        else{
+          document.querySelector('body').style.backgroundColor = 'white';
+          document.querySelector('body').style.color = 'black';
+          document.querySelector('#night_day').value = 'Night';
+        }
        ">
-       <input type="button" value="Day" onclick="
-       document.querySelector('body').style.backgroundColor = 'white';
-       document.querySelector('body').style.color = 'black';
-       ">
+
        <!--
        <h3 style="padding-left: 25px;">Dark Mode</h3>
        <label class="switch">
