@@ -14,7 +14,7 @@
    <div id="list">
      <ol>
        <li>ISTQB</li>
-       <ul style="list-style-type:circle; font-weight:normal; color: #0020C2;">
+       <ul style="list-style-type:circle; font-weight:normal;">
          <li><a href="ctfl.html" target="_self" title="CTFL">Foundation Level Certification</a></li>
          <li><a href="mobile_certi.html" target="_self" title="Mobile Testing">Mobile Testing</a></li>
          <li>Security Testing</li>
@@ -27,15 +27,35 @@
 
        <input style = "margin-left: 35px; width: 50px;" type = "button" value = "Night" onclick = "
        var target = document.querySelector('body');
+       var testTarget = document.getElementById('background1')
+       console.log(testTarget);
+
        if(this.value === 'Night'){
          target.style.backgroundColor = 'black';
          target.style.color = 'white';
+         testTarget.style.color ='black';
          this.value = 'Day';
+
+         var alist = document.querySelectorAll('a');
+         var i = 0;
+         while (i < alist.length)
+         {
+           alist[i].style.color = 'powderblue';
+           i = i + 1;
+         }
        }
         else{
           target.style.backgroundColor = 'white';
           target.style.color = 'black';
           this.value = 'Night';
+
+          var alist = document.querySelectorAll('a');
+          var i = 0;
+          while (i < alist.length)
+          {
+            alist[i].style.color = 'blue';
+            i = i + 1;
+          }
         }
        ">
 
