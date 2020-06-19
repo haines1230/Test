@@ -2,6 +2,41 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <script>
+      function NightDayHandler(self){
+        var target = document.querySelector('body');
+        var testTarget = document.getElementById('background1')
+        console.log(testTarget);
+
+        if(self.value === 'Night'){
+          target.style.backgroundColor = 'black';
+          target.style.color = 'white';
+          testTarget.style.color ='black';
+          self.value = 'Day';
+
+          var alist = document.querySelectorAll('a');
+          var i = 0;
+          while (i < alist.length)
+          {
+            alist[i].style.color = 'powderblue';
+            i = i + 1;
+          }
+        }
+         else {
+           target.style.backgroundColor = 'white';
+           target.style.color = 'black';
+           self.value = 'Night';
+
+           var alist = document.querySelectorAll('a');
+           var i = 0;
+           while (i < alist.length)
+           {
+             alist[i].style.color = 'blue';
+             i = i + 1;
+           }
+         }
+      }
+    </script>
     <title>Telematics</title>
 
     <link rel="stylesheet" href="Test_style.css">
@@ -25,39 +60,7 @@
        <li>Linux OS System</li>
        <br><br>
 
-       <input style = "margin-left: 35px; width: 50px;" type = "button" value = "Night" onclick = "
-       var target = document.querySelector('body');
-       var testTarget = document.getElementById('background1')
-       console.log(testTarget);
-
-       if(this.value === 'Night'){
-         target.style.backgroundColor = 'black';
-         target.style.color = 'white';
-         testTarget.style.color ='black';
-         this.value = 'Day';
-
-         var alist = document.querySelectorAll('a');
-         var i = 0;
-         while (i < alist.length)
-         {
-           alist[i].style.color = 'powderblue';
-           i = i + 1;
-         }
-       }
-        else{
-          target.style.backgroundColor = 'white';
-          target.style.color = 'black';
-          this.value = 'Night';
-
-          var alist = document.querySelectorAll('a');
-          var i = 0;
-          while (i < alist.length)
-          {
-            alist[i].style.color = 'blue';
-            i = i + 1;
-          }
-        }
-       ">
+       <input style = "margin-left: 35px; width: 50px;" type = "button" value = "Night" onclick ="NightDayHandler(this)">
 
 <!--
        <h3 style="padding-left: 25px;">Dark Mode</h3>
