@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <script>
 
-      function LinkSetColor(color){
+      function LinksSetColor(color){
         var alist = document.querySelectorAll('a');
           var i = 0;
           while (i < alist.length)
@@ -22,7 +22,7 @@
         document.querySelector('body').style.backgroundColor = color;
       }
 
-      function PicBGSetColor(color){
+      function PicBgSetColor(color){
         document.getElementById('background1').style.color = color;
       }
 
@@ -34,20 +34,20 @@
         console.log('night day handler started');
 
         if(self.value === 'Night'){
-          BodySetBackgroundColor('black');
-          BodySetColor('white');
-          PicBGSetColor('black');
+          Body.setBackgroundColor('black');
+          Body.BodySetColor('white');
+          Pic.BgSetColor('black');
           self.value = 'Day';
           console.log('it is night');
-          LinkSetColor('powderblue');
+          Links.setColor('powderblue');
         }
          else {
           console.log('it is day');
 
-          BodySetBackgroundColor('white');
-           BodySetColor('black');
+          Body.setBackgroundColor('white');
+           Body.setColor('black');
            self.value = 'Night';
-           LinkSetColor('blue');
+           Links.setColor('blue');
          }
       }
     </script>
