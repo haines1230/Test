@@ -3,40 +3,55 @@
   <head>
     <meta charset="utf-8">
     <script>
-      function NightDayHandler(self){
-        var target = document.querySelector('body');
-        var testTarget = document.getElementById('background1')
-        console.log(testTarget);
 
-        if(self.value === 'Night'){
-          target.style.backgroundColor = 'black';
-          target.style.color = 'white';
-          testTarget.style.color ='black';
-          self.value = 'Day';
-
-          var alist = document.querySelectorAll('a');
+      function LinkSetColor(color){
+        var alist = document.querySelectorAll('a');
           var i = 0;
           while (i < alist.length)
           {
-            alist[i].style.color = 'powderblue';
+            alist[i].style.color = color;
             i = i + 1;
           }
+      }
+
+      function BodySetColor(color){
+        document.querySelector('body').style.color = color;
+      }
+
+      function BodySetBackgroundColor(color){
+        document.querySelector('body').style.backgroundColor = color;
+      }
+
+      function PicBGSetColor(color){
+        document.getElementById('background1').style.color = color;
+      }
+
+      function nightDayHandler(self){
+        var target = document.querySelector('body');
+        var testTarget = document.getElementById('background1')
+
+        console.log(testTarget);
+        console.log('night day handler started');
+
+        if(self.value === 'Night'){
+          BodySetBackgroundColor('black');
+          BodySetColor('white');
+          PicBGSetColor('black');
+          self.value = 'Day';
+          console.log('it is night');
+          LinkSetColor('powderblue');
         }
          else {
-           target.style.backgroundColor = 'white';
-           target.style.color = 'black';
-           self.value = 'Night';
+          console.log('it is day');
 
-           var alist = document.querySelectorAll('a');
-           var i = 0;
-           while (i < alist.length)
-           {
-             alist[i].style.color = 'blue';
-             i = i + 1;
-           }
+          BodySetBackgroundColor('white');
+           BodySetColor('black');
+           self.value = 'Night';
+           LinkSetColor('blue');
          }
       }
     </script>
+
     <title>Telematics</title>
 
     <link rel="stylesheet" href="Test_style.css">
@@ -60,7 +75,7 @@
        <li>Linux OS System</li>
        <br><br>
 
-       <input style = "margin-left: 35px; width: 50px;" type = "button" value = "Night" onclick ="NightDayHandler(this)">
+       <input style = "margin-left: 35px; width: 50px;" type = "button" value = "Night" onclick ="nightDayHandler(this)">
 
 <!--
        <h3 style="padding-left: 25px;">Dark Mode</h3>
